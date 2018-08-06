@@ -9,8 +9,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
-  <link rel="shortcut icon" href="images/favicon.png" type="image/png">
-  <link href="css/style.default.css" rel="stylesheet">
+  <link rel="shortcut icon" href="Resources/images/favicon.png" type="image/png">
+  <link href="Resources/css/style.default.css" rel="stylesheet">
   
   
 <title>Holiday Inn - Cashiering</title>
@@ -18,11 +18,8 @@
 </head>
 <body>
 
-
+<!-- Random -->
 <!-- Preloader -->
-<div id="preloader">
-    <div id="status"><i class="fa fa-spinner fa-spin"></i></div>
-</div>
 
 <section>
 
@@ -55,12 +52,12 @@
 
       <ul class="nav nav-pills nav-stacked nav-bracket">
       <br>
-        <li><a href="Main_Cashier.jsp"><i class="fa fa-credit-card"></i> <span>Billing</span></a></li>
-        <li class="active"><a href="#"><i class="fa fa-list-alt"></i> <span>Fast Posting</span></a></li>
-        <li><a href="index.html"><i class="fa fa-paperclip"></i> <span>Cashier Functions</span></a></li>
-        <li><a href="index.html"><i class="fa fa-chain"></i> <span>Cashier Shift Functions</span></a></li>
-        <li><a href="index.html"><i class="fa fa-male"></i> <span>Passer by</span></a></li>
-        <li><a href="index.html"><i class="fa fa-barcode"></i> <span>Quick Check out</span></a></li>
+      <br>
+      
+      <br>
+        <li class="active"><a href="#"><i class="fa fa-credit-card"></i> <span>Billing</span></a></li>
+        <li><a href="Fast_Posting.jsp"><i class="fa fa-list-alt"></i> <span>Fast Posting</span></a></li>
+        <li><a href="Quick_Checkout.jsp"><i class="fa fa-barcode"></i> <span>Quick Check out</span></a></li>
       	<br>
       	<br>
         <li><a href="index.html"><i class="fa fa-sign-out"></i> <span>Sign Out</span></a></li>
@@ -158,7 +155,7 @@
     </div><!-- headerbar -->
     
     <div class="pageheader">
-      <h2><i class="fa fa-usd"></i> Fast Posting<span>Posting Customer Expenses</span></h2>
+      <h2><i class="fa fa-usd"></i> Billing <span>Manage Customer bills for check out</span></h2>
       <div class="breadcrumb-wrapper">
         <span class="label">You are here:</span>
         <ol class="breadcrumb">
@@ -170,10 +167,15 @@
 
     <div class="contentpanel">
     	<div id="top">
-
+    	<div class="form-group">
+				  <div class="col-sm-6">
+					<div class="checkbox block"><label><input type="checkbox"> Stay Overs</label></div>
+					<div class="checkbox block"><label><input type="checkbox"> Que Outs</label></div>
+					<div class="checkbox block"><label><input type="checkbox"> Checked Out</label></div>
+				  </div>
+			</div>
 	    	<div id = "AdvancedSearch">
 				<label class="">Advance Search:</label>
-				<br>
 				<div class="form-group">
 		              <label class="col-sm-1 control-label">Room</label>
 		              <div class="col-sm-4">
@@ -216,95 +218,151 @@
 		</div><!-- div top -->
 		
 		<!-- Pain -->
-		<div id="results">
 		<br>
-			<div class="col-md-15">
-	          <h5 class="subtitle mb5">Seach Results</h5>
-	          <p class="mb20">List of information searched.</p>
-	          <div class="table-responsive">
-	          <table class="table mb30">
-	            <thead>
-	              <tr>
-	                <th>#</th>
-	                <th>Room</th>
-	                <th>Name</th>
-	                <th>Arrival</th>
-	                <th>Departure</th>
-	                <th>Balance</th>
-	                <th>Status</th>
-	                <th>Company</th>
-	                <th>Group</th>
-	                <th>????</th>
-	                <th style="text-align: center;">Action</th>
-	                <th></th>
-	              </tr>
-	            </thead>
-	            <tbody>
-	              <tr>
-	                <td>1</td>
-	                <td>Room</td>
-	                <td>Name</td>
-	                <td>Arrival</td>
-	                <td>Departure</td>
-	                <td>Balance</td>
-	                <td>Status</td>
-	                <td>Company</td>
-	                <td>Group</td>
-	                <td>????</td>
-	                <td  style="text-align: center;"><button class="btn btn-primary btn-sm" data-toggle="modal" data-target=".bs-example-modal-lg"><i class="fa fa-pencil"></i></button></td>
-	               
-	              </tr>
-	            </tbody>
-	          </table>
-	          </div><!-- table -->
-	          <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-			  <div class="modal-dialog modal-lg">
-			    <div class="modal-content">
-			        <div class="modal-header">
-			            <button aria-hidden="true" data-dismiss="modal" class="close" type="button">&times;</button>
-			            <h4 class="modal-title">Preview: Room Name</h4>
-			        </div>
-			        <div class="modal-body">
-			        	          <div class="table-responsive">
-			          <table class="table mb30">
-			            <thead>
-			              <tr>
-			                <th>#</th>
-			                <th>Room</th>
-			                <th>Name</th>
-			                <th>Arrival</th>
-			                <th>Departure</th>
-			                <th>Balance</th>
-			                <th>Status</th>
-			                <th>Company</th>
-			                <th>Group</th>
-			                <th>????</th>
-			                
-			                <th></th>
-			              </tr>
-			            </thead>
-			            <tbody>
-			              <tr>
-			                <td>1</td>
-			                <td>Room</td>
-			                <td>Name</td>
-			                <td>Arrival</td>
-			                <td>Departure</td>
-			                <td>Balance</td>
-			                <td>Status</td>
-			                <td>Company</td>
-			                <td>Group</td>
-			                <td>????</td>
-			              </tr>
-			            </tbody>
-			          </table>
-			          </div><!-- table -->
-			        </div>
-			    </div>
-			  </div>
-			</div>
-	  </div>
+		<div class="col-md-15">
+          <h5 class="subtitle mb5">Seach Results</h5>
+          <p class="mb20">List of information searched.</p>
+          <div class="table-responsive">
+          <table class="table mb30">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Room</th>
+                <th>Name</th>
+                <th>Arrival</th>
+                <th>Departure</th>
+                <th>Balance</th>
+                <th>Status</th>
+                <th>Company</th>
+                <th>Group</th>
+                <th>Stock</th>
+                <th>Party</th>
+                <th style="text-align: center;">Action</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Room</td>
+                <td>Name</td>
+                <td>Arrival</td>
+                <td>Departure</td>
+                <td>Balance</td>
+                <td>Status</td>
+                <td>Company</td>
+                <td>Group</td>
+                <td>Stock</td>
+                <td>Party</td>
+                <td  style="text-align: center;"><button class="btn btn-primary btn-sm" data-toggle="modal" data-target=".bs-example-modal-lg"><i class="fa fa-eye"></i></button></td>
+               
+              </tr>
+            </tbody>
+          </table>
+          </div><!-- table -->
+          <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button aria-hidden="true" data-dismiss="modal" class="close" type="button">&times;</button>
+            <h4 class="modal-title">Preview: Room Name</h4>
+            <div class="form-group">
+              <label class="col-sm-3 control-label">Balance</label>
+              <div class="col-sm-2">
+                <input type="text" placeholder="" class="form-control">
+              </div>
+              <label class="col-sm-3 control-label">Status</label>
+              <div class="col-sm-2">
+                <input type="text" placeholder="" class="form-control">
+              </div>
+            </div>
+              
+            <div class="form-group">
+             <label class="col-sm-3 control-label">Arrival</label>
+              <div class="col-sm-2">
+                <input type="text" placeholder="" class="form-control">
+              </div>
+              <label class="col-sm-3 control-label">Departure</label>
+              <div class="col-sm-2">
+                <input type="text" placeholder="" class="form-control">
+              </div>
+            </div>
+			
+            <div class="form-group">
+             <label class="col-sm-3 control-label">Rate Code</label>
+              <div class="col-sm-2">
+                <input type="text" placeholder="" class="form-control">
+              </div>
+              <label class="col-sm-3 control-label">Rate</label>
+              <div class="col-sm-2">
+                <input type="text" placeholder="" class="form-control">
+              </div>
+            </div>			
+			
+			<div class="form-group">
+             <label class="col-sm-3 control-label">Company</label>
+              <div class="col-sm-5">
+                <input type="text" placeholder="" class="form-control">
+              </div>
+            </div> 
+            
+            <div class="form-group">
+            <label class="col-sm-3 control-label">Group</label>
+              <div class="col-sm-5">
+                <input type="text" placeholder="" class="form-control">
+              </div>
+            </div>
+            <div class="form-group">
+            	<label class="col-sm-3 control-label">Customer Name</label>
+            </div>
+            
+        </div>
+        <div class="modal-body">
+        <div class="table-responsive">
+          <table class="table mb30">
+            <thead>
+              <tr>
+                <th width="5%">Date</th>
+                <th width="5%">Code</th>
+                <th width="30%">Description</th>
+                <th width="15%">Amount</th>
+                <th width="5%">Qty</th>
+                <th width="5%">???</th>
+                <th width="10%">Check No.</th>
+                <th width="10%">Company</th>
+                <th width="10%">Reference</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>10/30</td>
+                <td>101</td>
+                <td>Sample desc</td>
+                <td>200</td>
+                <td>1</td>
+                <td>1</td>
+                <td></td>
+                <td></td>
+                <td></td> 
+              </tr>
+            </tbody>
+          </table>
+          </div><!-- table -->
+          <div class="form-group">
+	          <div class="pull-right">
+	          	<a class="btn btn-primary">Post</a>
+	          	<a class="btn btn-primary">Option</a>
+	          	<a class="btn btn-primary">Payment</a>
+	          	<a class="btn btn-primary">Statement</a>
+	          	<a class="btn btn-primary">Close</a>
+	          </div>	
+          </div>
+        </div>
+    </div>
   </div>
+</div>
+          
+        </div>
 		
 		<!-- end of pain -->
     </div>
@@ -325,24 +383,24 @@
 </section>
 
 
-<script src="js/jquery-1.11.1.min.js"></script>
-<script src="js/jquery-migrate-1.2.1.min.js"></script>
-<script src="js/jquery-ui-1.10.3.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/modernizr.min.js"></script>
-<script src="js/jquery.sparkline.min.js"></script>
-<script src="js/toggles.min.js"></script>
-<script src="js/retina.min.js"></script>
-<script src="js/jquery.cookies.js"></script>
+<script src="Resources/js/jquery-1.11.1.min.js"></script>
+<script src="Resources/js/jquery-migrate-1.2.1.min.js"></script>
+<script src="Resources/js/jquery-ui-1.10.3.min.js"></script>
+<script src="Resources/js/bootstrap.min.js"></script>
+<script src="Resources/js/modernizr.min.js"></script>
+<script src="Resources/js/jquery.sparkline.min.js"></script>
+<script src="Resources/js/toggles.min.js"></script>
+<script src="Resources/js/retina.min.js"></script>
+<script src="Resources/js/jquery.cookies.js"></script>
 
-<script src="js/flot/jquery.flot.min.js"></script>
-<script src="js/flot/jquery.flot.resize.min.js"></script>
-<script src="js/flot/jquery.flot.spline.min.js"></script>
-<script src="js/morris.min.js"></script>
-<script src="js/raphael-2.1.0.min.js"></script>
+<script src="Resources/js/flot/jquery.flot.min.js"></script>
+<script src="Resources/js/flot/jquery.flot.resize.min.js"></script>
+<script src="Resources/js/flot/jquery.flot.spline.min.js"></script>
+<script src="Resources/js/morris.min.js"></script>
+<script src="Resources/js/raphael-2.1.0.min.js"></script>
 
-<script src="js/custom.js"></script>
-<script src="js/dashboard.js"></script>
+<script src="Resources/js/custom.js"></script>
+<script src="Resources/js/dashboard.js"></script>
 
 
 </body>
