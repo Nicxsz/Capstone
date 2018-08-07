@@ -13,7 +13,7 @@
   <link href="Resources/css/style.default.css" rel="stylesheet">
   
   
-<title>HPMS - Cashiering</title>
+<title>HPMS - Reservation</title>
 
 </head>
 <body>
@@ -55,9 +55,9 @@
       <br>
       
       <br>
-        <li class="active"><a href="#"><i class="fa fa-credit-card"></i> <span>Billing</span></a></li>
-        <li><a href="Fast_Posting.jsp"><i class="fa fa-list-alt"></i> <span>Fast Posting</span></a></li>
-        <li><a href="Quick_Checkout.jsp"><i class="fa fa-barcode"></i> <span>Quick Check out</span></a></li>
+        <li><a href="Reserve_New.jsp"><i class="fa fa-list-alt"></i> <span>New Reservation</span></a></li>
+        <li  class="active"><a href="Reserve_Update.jsp"><i class="fa fa-edit"></i> <span>Update Reservation</span></a></li>
+        
       	<br>
       	<br>
         <li><a href="index.html"><i class="fa fa-sign-out"></i> <span>Sign Out</span></a></li>
@@ -155,12 +155,12 @@
     </div><!-- headerbar -->
     
     <div class="pageheader">
-      <h2><i class="fa fa-usd"></i> Billing <span>Manage Customer bills for check out</span></h2>
+      <h2><i class="fa fa-usd"></i>Update Reservation <span>Reserve Rooms for Customers</span></h2>
       <div class="breadcrumb-wrapper">
         <span class="label">You are here:</span>
         <ol class="breadcrumb">
           <li><a href="index.html">Home</a></li>
-          <li class="active">Cashiering</li>
+          <li class="active">Reservation</li>
         </ol>
       </div>
     </div>

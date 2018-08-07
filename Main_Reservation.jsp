@@ -13,7 +13,7 @@
   <link href="Resources/css/style.default.css" rel="stylesheet">
   
   
-<title>HPMS - Cashiering</title>
+<title>HPMS - Reservation</title>
 
 </head>
 <body>
@@ -55,9 +55,9 @@
       <br>
       
       <br>
-        <li class="active"><a href="#"><i class="fa fa-credit-card"></i> <span>Billing</span></a></li>
-        <li><a href="Fast_Posting.jsp"><i class="fa fa-list-alt"></i> <span>Fast Posting</span></a></li>
-        <li><a href="Quick_Checkout.jsp"><i class="fa fa-barcode"></i> <span>Quick Check out</span></a></li>
+        <li><a href="Reserve_New.jsp"><i class="fa fa-list-alt"></i> <span>New Reservation</span></a></li>
+        <li><a href="Reserve Update.jsp"><i class="fa fa-edit"></i> <span>Update Reservation</span></a></li>
+        
       	<br>
       	<br>
         <li><a href="index.html"><i class="fa fa-sign-out"></i> <span>Sign Out</span></a></li>
@@ -118,7 +118,7 @@
         
         <div class="topnav">
                         
-            <ul class="nav nav-horizontal">
+               <ul class="nav nav-horizontal">
                 <li class="active"><a href="Main_Reservation.jsp"><i class="fa fa-book"></i>Reservation</a></li>
                 <li><a href="frontdesk.jsp"><i class="fa fa-user"></i> <span>Front Desk</span></a></li>
                 <li><a href="Main_Cashier.jsp"><i class="fa fa-usd"></i> <span>Cashiering</span></a></li>
@@ -155,19 +155,19 @@
     </div><!-- headerbar -->
     
     <div class="pageheader">
-      <h2><i class="fa fa-usd"></i> Billing <span>Manage Customer bills for check out</span></h2>
+      <h2><i class="fa fa-usd"></i> Reservation <span>Reserve Rooms for Customers</span></h2>
       <div class="breadcrumb-wrapper">
         <span class="label">You are here:</span>
         <ol class="breadcrumb">
           <li><a href="index.html">Home</a></li>
-          <li class="active">Cashiering</li>
+          <li class="active">Reservation</li>
         </ol>
       </div>
     </div>
 
     <div class="contentpanel">
     	<div id="top">
-    	<div class="form-group">
+    		<div class="form-group">
 				  <div class="col-sm-6">
 					<div class="checkbox block"><label><input type="checkbox"> Stay Overs</label></div>
 					<div class="checkbox block"><label><input type="checkbox"> Que Outs</label></div>
