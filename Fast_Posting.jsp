@@ -12,23 +12,20 @@
   <link rel="shortcut icon" href="Resources/images/favicon.png" type="image/png">
   <link href="Resources/css/style.default.css" rel="stylesheet">
   
-<title>Holiday Inn - Cashiering</title>
+<title>HPMS - Cashiering</title>
 
 </head>
 <body>
 
 
-<!-- Preloader -->
-<div id="preloader">
-    <div id="status"><i class="fa fa-spinner fa-spin"></i></div>
-</div>
+
 
 <section>
 
   <div class="leftpanel">
 
     <div class="logopanel">
-        <h1><span>[</span> Holiday Inn <span>]</span></h1>
+        <h1><span>[</span> HPMS <span>]</span></h1>
     </div><!-- logopanel -->
 
     <div class="leftpanelinner">
@@ -142,7 +139,7 @@
                 <li><a href="profile.html"><i class="glyphicon glyphicon-user"></i> My Profile</a></li>
                 <li><a href="#"><i class="glyphicon glyphicon-cog"></i> Account Settings</a></li>
                 <li><a href="#"><i class="glyphicon glyphicon-question-sign"></i> Help</a></li>
-                <li><a href="signin.html"><i class="glyphicon glyphicon-log-out"></i> Log Out</a></li>
+                <li><a href="Login.jsp"><i class="glyphicon glyphicon-log-out"></i> Log Out</a></li>
               </ul>
             </div>
           </li>
@@ -184,14 +181,15 @@
 	                
 	                <th>Room</th>
 	                <th>Code</th>
-	                <th width="30%">Description</th>
+	                <th width="25%">Description</th>
 	                <th>Amount</th>
-	                <th width="5%">Qty</th>
-	                <th width="5%">Win</th>
+	                <th>Qty</th>
+	                <th>Win</th>
 	                <th>Check No.</th>
 	                <th>Supplement</th>
 	                <th>Reference</th>
-	                <th style="text-align: center;">Action</th>
+	                
+	                
 	                <th></th>
 	              </tr>
 	            </thead>
@@ -199,14 +197,14 @@
 	              <tr>
 	                <td><input name="room" type="text" placeholder="Room No." class="form-control input-sm"></td>
 	                <td><input name="room" type="text" placeholder="Code" class="form-control input-sm"></td>
-	                <td><input name="room" type="text" placeholder="Room Number" class="form-control input-sm"></td>
-	                <td><input name="room" type="text" placeholder="Room Number" class="form-control input-sm"></td>
-	                <td><input name="room" type="text" placeholder="Room Number" class="form-control input-sm"></td>
-	                <td><input name="room" type="text" placeholder="Room Number" class="form-control input-sm"></td>
-	                <td><input name="room" type="text" placeholder="Room Number" class="form-control input-sm"></td>
-	                <td><input name="room" type="text" placeholder="Room Number" class="form-control input-sm"></td>
-	                <td><input name="room" type="text" placeholder="Room Number" class="form-control input-sm"></td>
-	               <td  style="text-align: center;"><button class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></button></td>
+	                <td><input name="room" type="text" placeholder="Description" class="form-control input-sm"></td>
+	                <td><input name="room" type="text" placeholder="Amount" class="form-control input-sm"></td>
+	                <td><input name="room" type="text" placeholder="" class="form-control input-sm"></td>
+	                <td><input name="room" type="text" placeholder="" class="form-control input-sm"></td>
+	                <td><input name="room" type="text" placeholder="" class="form-control input-sm"></td>
+	                <td><input name="room" type="text" placeholder="" class="form-control input-sm"></td>
+	                <td><input name="room" type="text" placeholder="" class="form-control input-sm"></td>
+	               
 	              </tr>
 	            </tbody>
 	          </table>
@@ -265,6 +263,7 @@
 	          	<button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">View Code List</button>
 	          </div>
 	          <div class="pull-right">
+	          	<a href="Fast_Posting.jsp" class="btn btn-primary">Post</a> <!-- put servlet later OuO -->
 	          	<a href="Main_Cashier.jsp" class="btn btn-primary">Done</a>
 	          </div>	
     </div>

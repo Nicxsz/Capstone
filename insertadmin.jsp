@@ -7,10 +7,11 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>asdaszxc</title>
+<title>Insert fake admin</title>
 </head>
 <body>
 	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	<!-- 
 <% 
 	
 	sample db = new sample();
@@ -28,7 +29,8 @@
 		
 
 	
-%>
+%> -->
+
 	<script type="text/javascript">
 		$(document).ready(function (){
 			$(('#btnSubmit')).click(function(){
@@ -40,10 +42,9 @@
 					data:{user: name,pass:pass},
 					url:'insert',
 					success: function(result){
-						
+						alert("Admin User Added!")
 					},
 					error:function(result){
-						
 						alert(result)
 					}
 				});
@@ -52,7 +53,8 @@
 			})
 		});
 	</script>
-	<input type="text" id="user" placeholder="Input your Code">
+	<br>
+	<input type="text" id="user" placeholder="username">
 	<input type="text" id="pass" placeholder="pass">
 	<input type="button" id="btnSubmit" value="Submit" >
 </body>

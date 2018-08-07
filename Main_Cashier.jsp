@@ -13,7 +13,7 @@
   <link href="Resources/css/style.default.css" rel="stylesheet">
   
   
-<title>Holiday Inn - Cashiering</title>
+<title>HPMS - Cashiering</title>
 
 </head>
 <body>
@@ -26,7 +26,7 @@
   <div class="leftpanel">
 
     <div class="logopanel">
-        <h1><span>[</span> Holiday Inn <span>]</span></h1>
+        <h1><span>[</span> HPMS <span>]</span></h1>
     </div><!-- logopanel -->
 
     <div class="leftpanelinner">
@@ -140,7 +140,7 @@
                 <li><a href="profile.html"><i class="glyphicon glyphicon-user"></i> My Profile</a></li>
                 <li><a href="#"><i class="glyphicon glyphicon-cog"></i> Account Settings</a></li>
                 <li><a href="#"><i class="glyphicon glyphicon-question-sign"></i> Help</a></li>
-                <li><a href="signin.html"><i class="glyphicon glyphicon-log-out"></i> Log Out</a></li>
+                <li><a href="Login.jsp"><i class="glyphicon glyphicon-log-out"></i> Log Out</a></li>
               </ul>
             </div>
           </li>
