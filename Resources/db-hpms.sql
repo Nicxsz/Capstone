@@ -126,4 +126,60 @@
     PRIMARY KEY(Item_Post_ID)
     )ENGINE = InnoDB;
     
+
+-- ---
+-- Arrivals
+-- --
+    
+ CREATE TABLE T_Arrival(
+        Arrival_Type_ID int (11) NOT NULL AUTO_INCREMENT,
+        Arrival_Name varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+        Arrival_Company varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+        Arrival_Group varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+        Arrival_Source varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+        Arrival_Agent varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+        Arrival_Contact varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+        Arrival_Room_no varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+        Arrival_Last_Name varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+        Arrival_From datetime(0) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        Arrival_Postal_Code varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+        Arrival_Room_Type varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+        Arrival_Arrival_To varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+        Arrival_Communication varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+   
+    PRIMARY KEY(Arrival_Type_ID)    
+    ) ENGINE = InnoDB;
+
+  CREATE TABLE T_House_Guest(
+        House_Type_ID int (11) NOT NULL AUTO_INCREMENT,
+        House_Name varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+        House_Property varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+        House_Company varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+        House_Group varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+        House_Agent varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+        House_Contact varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+        House_Room_no varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+        House_Last_Name varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+        House_Arrival_From datetime(0) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        House_Postal_Code varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+        Housel_Room_Type varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+        House_Arrival_To datetime(0) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        House_Communication varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+        House_Status varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+
+   
+    PRIMARY KEY(House_Type_ID),
+    FOREIGN KEY (House_Type_ID) REFERENCES T_House_Guest(House_Type_ID)
+    ) ENGINE = InnoDB;
+
+    CREATE TABLE R_Room_Availability(
+        Room_Availability_Type_ID int (11) NOT NULL AUTO_INCREMENT,
+        Room_Availability_Category varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+        Room_Availability_No varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+        Room_Availability_Status varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+        
+   
+    PRIMARY KEY(Arrival_Type_ID)    
+    ) ENGINE = InnoDB
+
     
