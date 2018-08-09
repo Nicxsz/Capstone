@@ -44,12 +44,9 @@
                 <form method="POST" action="LoginServlet">
                     <h4 class="nomargin">Sign In</h4>
                     <p class="mt5 mb20">Login to access your account.</p>
-                
                     <input name="username" id ="username" type="text" class="form-control uname" placeholder="Username" />
                     <input name="password" id="password" type="password" class="form-control pword" placeholder="Password" />
-                    
-                    <button type="submit" class="btn btn-success btn-block">Sign In</button>
-                    
+                    <button type="submit" class="btn btn-success btn-block">Sign In</button>  
                 </form>
             </div><!-- col-sm-5 -->
             

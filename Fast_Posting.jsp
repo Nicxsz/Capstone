@@ -118,9 +118,9 @@
         <div class="topnav">
                         
             <ul class="nav nav-horizontal">
-                <li class=""><a href="dunno.jsp"><i class="fa fa-book"></i>Reservation</a></li>
+                <li class=""><a href="Main_Reservation.jsp"><i class="fa fa-book"></i>Reservation</a></li>
                 <li ><a href="frontdesk.jsp"><i class="fa fa-user"></i> <span>Front Desk</span></a></li>
-                <li class="active"><a href="cashiering.jsp"><i class="fa fa-usd"></i> <span>Cashiering</span></a></li>
+                <li class="active"><a href="Main_Cashier.jsp"><i class="fa fa-usd"></i> <span>Cashiering</span></a></li>
                 <li class=""><a href="room.jsp"><i class="fa fa-home"></i> <span>Room Management</span></a></li>
             </ul>
         </div>

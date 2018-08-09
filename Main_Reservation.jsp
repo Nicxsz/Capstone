@@ -166,56 +166,7 @@
     </div>
 
     <div class="contentpanel">
-    	<div id="top">
-    		<div class="form-group">
-				  <div class="col-sm-6">
-					<div class="checkbox block"><label><input type="checkbox"> Stay Overs</label></div>
-					<div class="checkbox block"><label><input type="checkbox"> Que Outs</label></div>
-					<div class="checkbox block"><label><input type="checkbox"> Checked Out</label></div>
-				  </div>
-			</div>
-	    	<div id = "AdvancedSearch">
-				<label class="">Advance Search:</label>
-				<div class="form-group">
-		              <label class="col-sm-1 control-label">Room</label>
-		              <div class="col-sm-4">
-		                <input name="room"type="text" placeholder="Room Number" class="form-control">
-		              </div>
-		              <label class="col-sm-1 control-label">Party</label>
-		              <div class="col-sm-4">
-		                <input name="party" type="text" placeholder="???" class="form-control">
-		              </div>
-		         </div>
-		         <div class="form-group">
-		              <label class="col-sm-1 control-label">Name</label>
-		              <div class="col-sm-4">
-		                <input name="name"type="text" placeholder="Customer Name" class="form-control">
-		              </div>
-		              <label class="col-sm-1 control-label">Stock</label>
-		              <div class="col-sm-4">
-		                <input name="stock" type="text" placeholder="???" class="form-control">
-		              </div>
-		         </div>
-		         <div class="form-group">
-		              <label class="col-sm-1 control-label">Group</label>
-		              <div class="col-sm-4">
-		                <input name="group" type="text" placeholder="Group Name" class="form-control">
-		              </div>
-		         </div>
-		         <div class="form-group">
-		              <label class="col-sm-1 control-label">Company</label>
-		              <div class="col-sm-4">
-		                <input name="name"type="text" placeholder="Company Name" class="form-control">
-		              </div>
-		         </div>    
-		         <div class="form-group">
-		              <div class="col-sm-4">
-		               <button class="btn btn-primary btn-sm" data-toggle="modal" ><i class="fa fa-search"></i>&nbsp Search</button>      
-		              </div>
-		         </div>
-		        
-			</div><!-- Advanced Search -->
-		</div><!-- div top -->
+    	
 		
 		<!-- Pain -->
 		<br>

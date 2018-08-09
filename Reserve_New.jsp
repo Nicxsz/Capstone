@@ -1,3 +1,6 @@
+<%@page import="java.sql.*"%>
+<%@page import="Controller.Getdata" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +10,7 @@
   <meta name="author" content="">
   <link rel="shortcut icon" href="images/favicon.png" type="image/png">
 
-  <title>Bracket Responsive Bootstrap3 Admin</title>
+  <title>HPMS - Reservation</title>
 
   <link rel="stylesheet" href="Resources/css/style.default.css" />
   
@@ -15,6 +18,8 @@
   <link rel="stylesheet" href="Resources/css/jquery.tagsinput.css" />
   <link rel="stylesheet" href="Resources/css/colorpicker.css" />
   <link rel="stylesheet" href="Resources/css/dropzone.css" />
+  <link href="Resources/css/bootstrap-editable.css" rel="stylesheet">
+  
   
 
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -172,50 +177,311 @@
       </div>
     </div>
 
-    
+    <form method = "post" action"">
     <div class="contentpanel">
-
-      <div class="row">
-      	<div class="panel panel-default">
-      		<div class="col-sm-6">
-	              <label>Arrival</label>
-	              <div class="input-group">
-	                <input type="text" class="form-control" placeholder="mm/dd/yyyy" id="arrival">
-	                <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-	              </div>
-	              <br>
-	              <label>Departure</label>
-	              <div class="input-group">
-	                <input type="text" class="form-control" placeholder="mm/dd/yyyy" id="departure">
-	                <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-	              </div>
-          </div><!-- size -->
-      	</div>
-      </div>
-	    	
-	    	<br>
-	    	<br>
+	    <div class="" id="first">
+	    <label class="col-sm-10 control-label">First Step: Adding the expected date of arrival</label>
+	    <br /> <br />
+			<div class="form-group">
+				<label class="col-sm-1 control-label">Arrival</label>
+			    <div class="col-sm-5">
+					<input type="text" class="form-control" placeholder="mm/dd/yyyy" id="arrival">
+			    </div>
+			    <label class="col-sm-1 control-label">Departure</label>
+			    <div class="col-sm-5">
+					<input type="text" class="form-control" placeholder="mm/dd/yyyy" id="departure">
+			    </div>
+			</div>
+		    <br>
+		    <br>
+			<div class="form-group">
+				<label class="col-sm-1 control-label">Nights</label>
+				<div class="col-sm-2">
+					<input name="night" id="night" type="number" min="1" placeholder="Nights" class="form-control">
+				</div>
+			 	<label class="col-sm-1 control-label">No. of rooms</label>
+			 	<div class="col-sm-2">
+			    	<input name="roomsnum" id="roomsnum" type="number" min="1" placeholder="No. of rooms" class="form-control">
+			    </div>
+			    <label class="col-sm-1 control-label">Adults</label>
+			    <div class="col-sm-2">
+			    	<input name="adult" id="adult" type="number" min="1" placeholder="Adults" class="form-control">
+			    </div>
+			    <label class="col-sm-1 control-label">Children</label>
+			    <div class="col-sm-2">
+			    	<input name="children" id="children" type="number" min="1" placeholder="Children" class="form-control">
+			    </div>
+			</div>
+		</div>
+		<br><br>
+		<div class="" id="second">
+		<label class="col-sm-10 control-label">Choosing Room Type</label>
+	    <br /> <br />
+		<div class="form-group">
+			<label class="col-sm-1 control-label">Room Type</label>
+				<div class="col-sm-5">
+					<select class="form-control mb15">
+                  		<option>Type 1</option>
+                  		<option>Type 2</option>
+                  		<option>Type 3</option>
+                	</select>
+			    </div>
+			    <div class="col-sm-1">
+					<button type="button" class="btn btn-primary " data-toggle="modal" data-target=".view-rooms"><i class="fa fa-eye"></i></button>
+			    </div>
+			</div>
+		</div>
+		
+					<!-- modal start -->
+			<div class="modal fade view-rooms" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+			  <div class="modal-dialog modal-lg">
+			    <div class="modal-content">
+			        <div class="modal-header">
+			            <button aria-hidden="true" data-dismiss="modal" class="close" type="button">&times;</button>
+			            <h4 class="modal-title">Preview: ???</h4>
+			        </div>
+			        <div class="modal-body">
+			        <div class="table-responsive">
+			          <table class="table mb30">
+			            <thead>
+			              <tr>
+			                <th width="5%">Date</th>
+			                <th width="5%">Code</th>
+			                <th width="30%">Description</th>
+			                <th width="15%">Amount</th>
+			                <th width="5%">Qty</th>
+			                <th width="5%">???</th>
+			                <th width="10%">Check No.</th>
+			                <th width="10%">Company</th>
+			                <th width="10%">Reference</th>
+			              </tr>
+			            </thead>
+			            <tbody>
+			              <tr>
+			                <td>10/30</td>
+			                <td>101</td>
+			                <td>Sample desc</td>
+			                <td>200</td>
+			                <td>1</td>
+			                <td>1</td>
+			                <td></td>
+			                <td></td>
+			                <td></td> 
+			              </tr>
+			            </tbody>
+			          </table>
+			          </div><!-- table -->
+			          <div class="form-group">
+				          <div class="pull-right">
+				          	<a data-dismiss="modal" type="button" class="btn btn-primary">Close</a>
+				          </div>	
+			          </div>
+			        </div>
+			    </div>
+			  </div>
+			</div>
+		<!-- modal end -->
+		
+		<br><br>
+		
+		<div class="" id="third">
+	    <label class="col-sm-10 control-label">Third Step: Adding Customer Info</label>
+	    <br /> <br />
+	    	<div class="form-group">
+				<label class="col-sm-1 control-label">Last Name</label>
+			    <div class="col-sm-4">
+					<input type="text" class="form-control" id="lname">
+			    </div>
+			    <div class="col-sm-1">
+					<button type="button" class="btn btn-primary " data-toggle="modal" data-target=".add-pipol"><i class="fa fa-plus"></i></button>
+			    </div>
+			    <label class="col-sm-1 control-label">First Name</label>
+			    <div class="col-sm-5">
+					<input type="text" class="form-control" id="fname">
+			    </div>
+			</div><br>
 				<div class="form-group">
-		              <label class="col-sm-1 control-label">Nights</label>
-		              <div class="col-sm-2">
-		                <input name="night" id="night" type="number" placeholder="Nights" class="form-control">
-		              </div>
-		              <label class="col-sm-1 control-label">No. of rooms</label>
-		               <div class="col-sm-2">
-		                <input name="roomsnum" id="roomsnum" type="number" placeholder="Nights" class="form-control">
-		              </div>
-		         </div>
-		         <div class="form-group">
-		               <label class="col-sm-1 control-label">Adults</label>
-		              <div class="col-sm-2">
-		                <input name="adult" id="adult" type="number" placeholder="Nights" class="form-control">
-		              </div>
-		              <label class="col-sm-1 control-label">Children</label>
-		               <div class="col-sm-2">
-		                <input name="children" id="children" type="number" placeholder="Nights" class="form-control">
-		              </div>
-		         </div>
+				<label class="col-sm-1 control-label">Email</label>
+			    <div class="col-sm-5">
+					<input type="text" class="form-control" id="email">
+			    </div>
+			    <label class="col-sm-1 control-label">Group</label>
+			    <div class="col-sm-5">
+					<input type="text" class="form-control" id="group">
+			    </div>
+			</div><br>
+			<div class="form-group">
+				<label class="col-sm-1 control-label">Title</label>
+			    <div class="col-sm-3">
+					<input type="text" class="form-control" id="title">
+			    </div>
+			    <label class="col-sm-1 control-label">Language</label>
+			    <div class="col-sm-3">
+					<input type="text" class="form-control" id="language">
+			    </div>
+			    <label class="col-sm-1 control-label">Phone</label>
+			    <div class="col-sm-3">
+					<input type="text" class="form-control" id="phone">
+			    </div>
+			</div><br>
+			<!-- modal start -->
+			
+			<div class="modal fade add-pipol" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+			  <div class="modal-dialog modal-lg">
+			    <div class="modal-content">
+			        <div class="modal-header">
+			            <button aria-hidden="true" data-dismiss="modal" class="close" type="button">&times;</button>
+			            <h4 class="modal-title">Individual Profile ID</h4>
+			        </div>
+			        <div class="modal-body">
+					<h3>Guest Information</h3>
+			        <br><br>
+			       		<!-- some fields -->
+			       		<form method="post" action = "r_cust_info">
+			    		<div class="form-group">
+			              <label class="col-sm-2 control-label">Last Name</label>
+			              <div class="col-sm-4">
+			                <input type="text" placeholder="" class="form-control">
+			              </div>
+			              <label class="col-sm-2 control-label">First Name</label>
+			              <div class="col-sm-4">
+			                <input type="text" placeholder="" class="form-control">
+			              </div>
+			            </div>
+			            <div class="form-group">
+			              <label class="col-sm-2 control-label">Language</label>
+			              <div class="col-sm-4">
+			                <input type="text" placeholder="" class="form-control">
+			              </div>
+			              <label class="col-sm-2 control-label">Title</label>
+			              <div class="col-sm-4">
+			                <input type="text" placeholder="" class="form-control">
+			              </div>
+			            </div>	
+			            
+			            <div class="form-group">
+			              <label class="col-sm-2 control-label">Date of Birth</label>
+			                <!-- pain bday -->
+                   				<div class="col-sm-4">
+                   					<input type="date" placeholder=""  class="form-control" style=" height:40px;">
+                   				</div>
+			                <!-- end bday -->
+			            </div>			          	          	
+				    	<!-- end of some fields OuO -->
+				    	<h3>Communication Information</h3>
+			        <br><br>
+			       		<!-- some fields 2 -->
+			    		<div class="form-group">
+			              <label class="col-sm-2 control-label">Address</label>
+			              <div class="col-sm-4">
+			                <input type="text" placeholder="" class="form-control">
+			              </div>
+			              <label class="col-sm-2 control-label">Home Address</label>
+			              <div class="col-sm-4">
+			                <input type="text" placeholder="" class="form-control">
+			              </div>
+			            </div>
+			            <div class="form-group">
+			              <label class="col-sm-2 control-label">City</label>
+			              <div class="col-sm-4">
+			                <input type="text" placeholder="" class="form-control">
+			              </div>
+			              <label class="col-sm-2 control-label">Postal Code</label>
+			              <div class="col-sm-4">
+			                <input type="text" placeholder="" class="form-control">
+			              </div>
+			            </div>	
+			            
+			             <div class="form-group">
+			              <label class="col-sm-2 control-label">Country</label>
+			              <div class="col-sm-4">
+			                <input type="text" placeholder="" class="form-control">
+			              </div>
+			              <label class="col-sm-2 control-label">State</label>
+			              <div class="col-sm-4">
+			                <input type="text" placeholder="" class="form-control">
+			              </div>
+			            </div>
+			            <!-- contact type -->
+			            <br><br>
+			            <h4>Contact Details</h4>
+			            <br>
+			            <div class="form-group">
+			              <div class="col-sm-4">
+			                    <label class="col-sm-5 control-label">Contact Type</label>
+			              </div>
+			              <div class="col-sm-4">
+			                    <label class="col-sm-5 control-label">Contact Info</label>
+			              </div>
+			            </div>	  
+			              <div class="form-group">
+			              <div class="col-sm-4">
+			                <select id="contact_type1" class="form-control ">
+			                  
+			                </select>
+			                <script>
+								
+			                </script>
+			              </div>
+			              <div class="col-sm-4">
+			                <input id="contact_info1" type="text" placeholder="" class="form-control">
+			              </div>
+			            </div>	  
+			            <div class="form-group">
+			              <div class="col-sm-4">
+			                <select id="contact_type2" class="form-control mb15">
+			                  <option>Option 1</option>
+			                  <option>Option 2</option>
+			                  <option>Option 3</option>
+			                </select>
+			              </div>
+			              <div id="contact_info2"class="col-sm-4">
+			                <select class="form-control mb15">
+			                  <option>Option 1</option>
+			                  <option>Option 2</option>
+			                  <option>Option 3</option>
+			                </select>
+			              </div>
+			            </div>
+			            <div class="form-group">
+			              <div class="col-sm-4">
+			                <select id="contact_type3" class="form-control ">
+			                  <option>Option 1</option>
+			                  <option>Option 2</option>
+			                  <option>Option 3</option>
+			                </select>
+			              </div>
+			              <div class="col-sm-4">
+			                <select id="contact_info3 "class="form-control mb15">
+			                  <option>Option 1</option>
+			                  <option>Option 2</option>
+			                  <option>Option 3</option>
+			                </select>
+			              </div>
+			            </div>	  
+			            <!-- end con -->
+			            
+			                   	          	
+				    	<!-- end of some fields 2 OuO -->
+			          	<div class="form-group">
+				      		<div class="pull-right">
+				          		<a type="submit" class="btn btn-primary">Submit</a>
+				          		<a data-dismiss="modal" type="button" class="btn btn-primary">Close</a>
+							</div>	
+			          	</div>
+			          	</form>
+			        </div>
+			    </div>
+			  </div>
+			</div>
+			</form>
+		<!-- modal end -->
+		</div>
     </div><!-- contentpanel -->
+     	<div class="col-sm-1 pull-right">
+			<button type="submit" class="btn btn-primary btn-block">Submit</button>
+		</div>
+  	
   </div><!-- mainpanel -->
   
   <div class="rightpanel">
@@ -229,10 +495,6 @@
   </div><!-- rightpanel -->
   
 </section>
-
-
-
-
 <script src="Resources/js/jquery-1.11.1.min.js"></script>
 <script src="Resources/js/jquery-migrate-1.2.1.min.js"></script>
 <script src="Resources/js/jquery-ui-1.10.3.min.js"></script>
@@ -244,34 +506,62 @@
 <script src="Resources/js/jquery.cookies.js"></script>
 
 
-<script src="Resources/js/jquery.autogrow-textarea.js"></script>
-<script src="Resources/js/bootstrap-timepicker.min.js"></script>
-<script src="Resources/js/jquery.maskedinput.min.js"></script>
-<script src="Resources/js/jquery.tagsinput.min.js"></script>
-<script src="Resources/js/jquery.mousewheel.js"></script>
 <script src="Resources/js/select2.min.js"></script>
-<script src="Resources/js/dropzone.min.js"></script>
-<script src="Resources/js/colorpicker.js"></script>
+<script src="Resources/js/jquery.validate.min.js"></script>
 
 
 <script src="Resources/js/custom.js"></script>
 
 <script>
+//datepicker
 jQuery(document).ready(function(){
     
     "use strict";
-  
   // Arrival
   jQuery('#arrival').datepicker();
   
   // Departure
   jQuery('#departure').datepicker();
+ 
   
-
+  
   
 });
 </script>
 
+
+<!-- ajax insert -->
+<!-- 
+	<script type="text/javascript">
+		$(document).ready(function (){
+			$(('#submit')).click(function(){
+				var arrival = $('#arrival').val();
+				var departure = $('#departure').val();
+				var night = $('#nights').val();
+				var rooms = $('#roomsnum').val();
+				var kids = $('#children').val();
+				var adult = $('#adult').val();
+				
+				$.ajax({
+					type:'POST',
+					data:{arrival: arrival,departure:departure,nights:night,roomsnum:rooms,children:kids,adult:adult},
+					url:'Reservation_insert_new',
+					success: function(result){
+						alert(arrival)
+						alert(departure)
+						alert(night)
+						alert(kids)
+						alert(adult)
+					},
+					error:function(result){
+						alert(result)
+					}
+				});
+
+			
+			})
+		});
+	</script>-->
 
 </body>
 </html>
